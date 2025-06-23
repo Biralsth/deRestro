@@ -9,9 +9,7 @@ import Footer from './footer/Footer'
 export default function RootLayout() {
     return (
         <>
-            <Header />
-            <Outlet />
-            <Footer />
+
 
 
 

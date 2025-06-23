@@ -1,58 +1,28 @@
-import React from "react";
+import React from 'react'
 import { createBrowserRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router-dom";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact"
-
-
-
-import RootLayout from "./components/RootLayout";
-
-
+import Home from './pages/home/Home'
 
 export default function App() {
-
   const router = createBrowserRouter([
     {
       path: '/',
       element: <RootLayout />,
       children: [
-
         {
-          path: '/',
-          element: <Home />,
-
+          index: true,
+          element: <Home />
 
         },
-        {
-          path: 'about',
-          element: <About />
-        },
-        {
-          path: 'contact',
-          element: <Contact />
-        }
-      ]
+      ],
     }
 
+  ]);
 
-  ])
+  return <div className="">
 
+    <RouterProvider router={router} />
 
+  </div>
 
-
-
-
-  return (
-    <div >
-      <RouterProvider router={router} />
-
-
-
-
-
-
-    </div>
-  )
 }
